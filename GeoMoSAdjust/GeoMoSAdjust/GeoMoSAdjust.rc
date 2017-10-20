@@ -1,0 +1,355 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\GeoMoSAdjust.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GeoMoSAdjust.ico"
+IDI_DataBase            ICON                    "res\\database_32px.ico"
+IDI_Config              ICON                    "res\\gear_32px.ico"
+IDI_Monitor             ICON                    "res\\Monitor_32px_easyicon.net.ico"
+IDI_Start               ICON                    "res\\Play_32px.ico"
+IDI_Stop                ICON                    "res\\Stop_32pxt.ico"
+IDI_DataBase_Large      ICON                    "res\\database_64px.ico"
+IDI_Monitor_Large       ICON                    "res\\Monitor_64px.net.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 183, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 GeoMoSAdjust"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "GeoMoSAdjust V1.0  Build 2016-10-31",IDC_STATIC,42,14,132,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定(&O)",IDOK,115,43,55,16,WS_GROUP
+END
+
+IDD_GEOMOSADJUST_DIALOG DIALOGEX 0, 0, 223, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "GeoMoS监测自动平差助手"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,208,155,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "开始",IDC_BtnStart,7,167,64,25
+    PUSHBUTTON      "停止",IDC_BtnStop,80,167,64,25
+END
+
+IDD_DlgDBCfg DIALOGEX 0, 0, 250, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数据库设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定(&O)",IDOK,121,114,55,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,185,114,55,16
+    GROUPBOX        "GeoMos数据库",IDC_STATIC,7,7,233,100
+    LTEXT           "IP地址：",IDC_STATIC,20,26,40,8
+    CONTROL         "",IDC_IPADRS,"SysIPAddress32",WS_TABSTOP,67,22,160,15
+    LTEXT           "数据库名:",IDC_STATIC,20,45,40,8
+    LTEXT           "用户名称：",IDC_STATIC,20,64,40,8
+    LTEXT           "登录密码：",IDC_STATIC,20,83,40,8
+    EDITTEXT        IDC_editDBName,67,42,160,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_editUserName,67,61,160,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_editPassword,67,80,160,15,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "测试连接(&T)",IDC_BtnTestConnect,7,114,60,16
+END
+
+IDD_DlgMonitor DIALOGEX 0, 0, 416, 376
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "监测设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "项目选择",IDC_STATIC,7,7,400,170
+    CONTROL         "Custom1",IDC_ProjectSelect,"MFCGridCtrl",WS_TABSTOP,19,22,376,123
+    PUSHBUTTON      "新建(&N)",IDC_BtnNewPrj,19,151,55,16
+    PUSHBUTTON      "删除(&D)",IDC_BtnDeletePrj,340,150,55,16
+    GROUPBOX        "数据格式和路径",IDC_STATIC,7,182,400,110
+    LTEXT           "报告存放目录",IDC_STATIC,17,201,91,8
+    EDITTEXT        IDC_editReportPath,111,197,251,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BtnReportPathSel,365,196,30,16
+    LTEXT           "Data文件存放目录",IDC_STATIC,17,230,91,8
+    EDITTEXT        IDC_editDataPath,111,225,251,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BtnDataPathSel,365,224,30,16
+    LTEXT           "工程文件选择",IDC_STATIC,17,249,91,8
+    EDITTEXT        IDC_editProjectPath,111,246,251,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BtnProjectPathSel,365,245,30,16
+    LTEXT           "StarNet应用程序选择",IDC_STATIC,17,270,91,8
+    EDITTEXT        IDC_editStarNetPath,111,267,251,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BtnStarNetPathSel,365,267,30,16
+    CONTROL         "使用StarNet进行平差",IDC_CheckDifference,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,214,91,10
+    GROUPBOX        "平差设置",IDC_STATIC,7,297,400,50
+    LTEXT           "回滚检索数据时间[分钟]:",IDC_STATIC,17,313,95,13
+    EDITTEXT        IDC_editSeachTime,111,310,100,15,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "收敛失败仍将结果写入GeoMoS数据库",IDC_CheckWriteDBFail,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,310,146,10
+    CONTROL         "卡方检验指标设置太低时更新坐标",IDC_CheckAxisLow,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,329,136,10
+    PUSHBUTTON      "观测设置(&O)...",IDC_BtnObserveCfg,7,352,70,16
+    PUSHBUTTON      "保存(&S)",IDC_BtnSave,352,352,55,16
+    PUSHBUTTON      "全部保存",IDC_BtnSaveAll,290,352,55,16
+END
+
+IDD_DlgObserveCfg DIALOGEX 0, 0, 595, 327
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "观测设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定(&O)",IDOK,463,301,55,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,529,301,55,16
+    GROUPBOX        "点名管理",IDC_STATIC,7,7,140,287
+    CONTROL         "Custom1",IDC_GridNodeManager,"MFCGridCtrl",WS_TABSTOP,19,21,116,241
+    GROUPBOX        "观测方向",IDC_STATIC,153,7,140,287
+    PUSHBUTTON      "新建(&N)",IDC_BtnInsertNode,19,268,55,16
+    PUSHBUTTON      "删除(&D)",IDC_BtnDeleteNode,80,268,55,16
+    CONTROL         "Custom1",IDC_GridOrientation,"MFCGridCtrl",WS_TABSTOP,165,21,116,241
+    PUSHBUTTON      "新建(&N)",IDC_BtnInsertOrientation,165,268,55,16
+    PUSHBUTTON      "删除(&D)",IDC_BtnDeleteOrientation,226,268,55,16
+    GROUPBOX        "点位偏移",IDC_STATIC,299,7,285,287
+    CONTROL         "Custom3",IDC_GridOffset,"MFCGridCtrl",WS_TABSTOP,311,21,262,240
+    PUSHBUTTON      "新建(&N)",IDC_BtnInsertOffset,310,268,55,16
+    PUSHBUTTON      "删除(&D)",IDC_BtnDeleteOffset,517,268,55,16
+END
+
+IDD_DateTimeDlg DIALOGEX 0, 0, 150, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入日期"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,8,7,132,15
+    DEFPUSHBUTTON   "确定(&O)",IDOK,21,29,55,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,84,29,55,16
+END
+
+IDD_TimeSpanDlg DIALOGEX 0, 0, 150, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入时间"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,9,8,131,15
+    DEFPUSHBUTTON   "确定(&O)",IDOK,23,31,55,16
+    PUSHBUTTON      "取消(&C)",IDCANCEL,86,31,55,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_GEOMOSADJUST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_DlgDBCfg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_DlgMonitor, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 409
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 369
+    END
+
+    IDD_DlgObserveCfg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 588
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 320
+    END
+
+    IDD_DateTimeDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TimeSpanDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GeoMoSAdjust.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "GeoMoSAdjust.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About GeoMoSAdjust..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\GeoMoSAdjust.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

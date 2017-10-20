@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BiTree", "BiTree\BiTree.vcproj", "{79E68947-8BB1-4131-8AE8-0F4F4697AC09}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadBiTree", "ThreadBiTree\ThreadBiTree.vcproj", "{0A670C07-3B67-4C6D-8751-0E4837E01B66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79E68947-8BB1-4131-8AE8-0F4F4697AC09}.Debug|Win32.ActiveCfg = Debug|Win32
+		{79E68947-8BB1-4131-8AE8-0F4F4697AC09}.Debug|Win32.Build.0 = Debug|Win32
+		{79E68947-8BB1-4131-8AE8-0F4F4697AC09}.Release|Win32.ActiveCfg = Release|Win32
+		{79E68947-8BB1-4131-8AE8-0F4F4697AC09}.Release|Win32.Build.0 = Release|Win32
+		{0A670C07-3B67-4C6D-8751-0E4837E01B66}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A670C07-3B67-4C6D-8751-0E4837E01B66}.Debug|Win32.Build.0 = Debug|Win32
+		{0A670C07-3B67-4C6D-8751-0E4837E01B66}.Release|Win32.ActiveCfg = Release|Win32
+		{0A670C07-3B67-4C6D-8751-0E4837E01B66}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
